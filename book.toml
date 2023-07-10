@@ -1,0 +1,6 @@
+[book]
+authors = ["Jane Dunn", "E. Eric Matus"]
+language = "en"
+multilingual = false
+src = "src"
+title = "DEVELOPMENT|CSSD Sailing Manual|DEVELOPMENT"
