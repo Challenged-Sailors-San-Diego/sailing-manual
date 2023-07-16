@@ -1,0 +1,811 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>DEVELOPMENT|CSSD Sailing Manual|DEVELOPMENT</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="cover.html">Cover</a></li><li class="chapter-item expanded affix "><a href="sailing_manual.html">Sailing Manual</a></li><li class="chapter-item expanded "><a href="parts_of_a_boat.html"><strong aria-hidden="true">1.</strong> Parts of a Boat</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="sailing_terminology.html"><strong aria-hidden="true">1.1.</strong> Sailing Terminology</a></li><li class="chapter-item expanded "><a href="basic_right_of_way_rules.html"><strong aria-hidden="true">1.2.</strong> Basic Right of Way Rules</a></li></ol></li><li class="chapter-item expanded "><a href="points_of_sail.html"><strong aria-hidden="true">2.</strong> Points of Sail</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="identifying_wind_direction.html"><strong aria-hidden="true">2.1.</strong> Identifying Wind Direction</a></li><li class="chapter-item expanded "><a href="sail_on_a_beam_reach.html"><strong aria-hidden="true">2.2.</strong> Sail on a Beam Reach</a></li><li class="chapter-item expanded "><a href="sail_close-hauled_using_telltales.html"><strong aria-hidden="true">2.3.</strong> Sail Close-Hauled Using Telltales</a></li><li class="chapter-item expanded "><a href="sail_on_a_broad_reach.html"><strong aria-hidden="true">2.4.</strong> Sail on a Broad Reach</a></li><li class="chapter-item expanded "><a href="sail_on_a_run.html"><strong aria-hidden="true">2.5.</strong> Sail on a Run (Wing-on-wing)</a></li></ol></li><li class="chapter-item expanded "><a href="martin_16_controls.html"><strong aria-hidden="true">3.</strong> Martin 16 Controls</a></li><li class="chapter-item expanded "><a href="changing_your_heading.html"><strong aria-hidden="true">4.</strong> Changing Your Heading</a></li><li class="chapter-item expanded "><a href="tacking.html"><strong aria-hidden="true">5.</strong> Tacking (coming about)</a></li><li class="chapter-item expanded "><a href="jibing.html"><strong aria-hidden="true">6.</strong> Jibing</a></li><li class="chapter-item expanded "><a href="safety_position.html"><strong aria-hidden="true">7.</strong> Safety Position</a></li><li class="chapter-item expanded "><a href="sailing_a_straight_course.html"><strong aria-hidden="true">8.</strong> Sailing a Straight Course</a></li><li class="chapter-item expanded "><a href="changing_sail_trim_while_looking_ahead.html"><strong aria-hidden="true">9.</strong> Changing Sail Trim While Looking Ahead</a></li><li class="chapter-item expanded "><a href="getting_out_of_irons.html"><strong aria-hidden="true">10.</strong> Getting Out of Irons</a></li><li class="chapter-item expanded "><a href="slowing_or_stopping.html"><strong aria-hidden="true">11.</strong> Slowing or Stopping</a></li><li class="chapter-item expanded "><a href="mob_drill.html"><strong aria-hidden="true">12.</strong> Man Overboard (MOB) Drill</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="mob_drill_quick_stop.html"><strong aria-hidden="true">12.1.</strong> Man Overboard Drill (Using Quick Stop)</a></li></ol></li><li class="chapter-item expanded "><a href="mob_drill_adapted.html"><strong aria-hidden="true">13.</strong> Man Overboard (MOB) Drill "Adapted"</a></li><li class="chapter-item expanded "><a href="sailing_using_clock_positions.html"><strong aria-hidden="true">14.</strong> Sailing Using Clock Positions</a></li><li class="chapter-item expanded "><a href="preparation.html"><strong aria-hidden="true">15.</strong> Preparation</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="dressing_for_hot_or_cold.html"><strong aria-hidden="true">15.1.</strong> Dressing for Hot or Cold</a></li><li class="chapter-item expanded "><a href="basic_knots.html"><strong aria-hidden="true">15.2.</strong> Basic Knots</a></li></ol></li><li class="chapter-item expanded "><a href="beyond_sailing_the_boat.html"><strong aria-hidden="true">16.</strong> Beyond Sailing the Boat</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="adjusting_and_depowering_sails.html"><strong aria-hidden="true">16.1.</strong> Adjusting and Depowering Sails</a></li><li class="chapter-item expanded "><a href="line_handling.html"><strong aria-hidden="true">16.2.</strong> Line Handling</a></li><li class="chapter-item expanded "><a href="reefing.html"><strong aria-hidden="true">16.3.</strong> Reefing</a></li><li class="chapter-item expanded "><a href="stowing_sails.html"><strong aria-hidden="true">16.4.</strong> Stowing Sails</a></li></ol></li><li class="chapter-item expanded "><a href="environment.html"><strong aria-hidden="true">17.</strong> Environment</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="weather.html"><strong aria-hidden="true">17.1.</strong> Weather</a></li><li class="chapter-item expanded "><a href="offshore_and_onshore_winds.html"><strong aria-hidden="true">17.2.</strong> Offshote and Onshore Winds</a></li><li class="chapter-item expanded "><a href="tides_and_currents.html"><strong aria-hidden="true">17.3.</strong> Tides and Currents</a></li><li class="chapter-item expanded "><a href="aids_to_navigation.html"><strong aria-hidden="true">17.4.</strong> Aids to Navigation</a></li><li class="chapter-item expanded "><a href="charts.html"><strong aria-hidden="true">17.5.</strong> Charts</a></li></ol></li><li class="chapter-item expanded "><a href="safety.html"><strong aria-hidden="true">18.</strong> Safety</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cold_and_heat_effects.html"><strong aria-hidden="true">18.1.</strong> Cold and Heat Effects</a></li><li class="chapter-item expanded "><a href="electrical.html"><strong aria-hidden="true">18.2.</strong> Electrical</a></li><li class="chapter-item expanded "><a href="grounding.html"><strong aria-hidden="true">18.3.</strong> Grounding</a></li><li class="chapter-item expanded "><a href="anchoring.html"><strong aria-hidden="true">18.4.</strong> Anchoring</a></li><li class="chapter-item expanded "><a href="equipment.html"><strong aria-hidden="true">18.5.</strong> Equipment</a></li><li class="chapter-item expanded "><a href="first_aid.html"><strong aria-hidden="true">18.6.</strong> First Aid</a></li><li class="chapter-item expanded "><a href="signaling_help.html"><strong aria-hidden="true">18.7.</strong> Signaling Help</a></li><li class="chapter-item expanded "><a href="vhf_basic_operation.html"><strong aria-hidden="true">18.8.</strong> VHF Basic Operation</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">DEVELOPMENT|CSSD Sailing Manual|DEVELOPMENT</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="sailing-manual"><a class="header" href="#sailing-manual">Sailing Manual</a></h1>
+<p><img src="images/cover.png" alt="challenged sailors cover" /></p>
+<p>Written by Jane Dunn 1/29/2016</p>
+<p>Updated by E. Eric Matus 6/22/2022</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sailing-manual-1"><a class="header" href="#sailing-manual-1">Sailing Manual</a></h1>
+<p><img src="images/at_the_dock.png" alt="At the dock" /></p>
+<p>This manual has been developed for people sailing in Martin 16 sailboats. Martin 16s have a jib boom and forward-facing seating, as well as a joystick to control steering. Some of the usual sailing instructions have been modified to suit the boats and the needs of various sailors.</p>
+<p>Each lesson can be accomplished in about 10 to 15 minutes. More experienced sailors will be able to complete several of the first lessons quickly. It is strongly suggested that all lessons be done in order. Each lesson has been developed to build on the sailing skills and vocabulary discussed in previous lessons.</p>
+<p>We hope you enjoy your day on the water, and find these sailing practice skill lessons informative and worthwhile!</p>
+<p>By Jane Dunn 1/28/2016</p>
+<p>Updated by E. Eric Matus 6/22/2022</p>
+<p>Converted to web book by M. Ryan Sullivan 7/16/2023</p>
+<p><a href="mailto:info@challengedsailors.org">Email</a> us if you spot any issues.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-1---the-basics-of-sail"><a class="header" href="#part-1---the-basics-of-sail">Part 1 - The Basics of Sail</a></h1>
+<h2 id="parts-of-a-boat"><a class="header" href="#parts-of-a-boat">Parts of a Boat</a></h2>
+<p><img src="images/parts_of_a_boat.png" alt="image" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sailing-terminology"><a class="header" href="#sailing-terminology">Sailing Terminology</a></h1>
+<h2 id="parts-of-a-sailboat-diagram"><a class="header" href="#parts-of-a-sailboat-diagram">Parts of A Sailboat <a href="parts_of_a_boat.html">Diagram</a></a></h2>
+<ul>
+<li><strong>Beam</strong> Widest part of the boat</li>
+<li><strong>Block</strong> A device used to change a line’s direction (nautical term for pulley)</li>
+<li><strong>Boom</strong> The horizontal spar that holds out the bottom (foot) of the mainsail</li>
+<li><strong>Bow</strong> Front of the boat</li>
+<li><strong>Cleat</strong> A metal or plastic device used to secure a line</li>
+<li><strong>Cockpit</strong> The interior part of the boat where people usually sit</li>
+<li><strong>Companion</strong> Seat Aft seat in the boat</li>
+<li><strong>Joystick</strong> (aka Tiller) The lever in the cockpit used for steering</li>
+<li><strong>Deck</strong> The top of the boat that covers the hull</li>
+<li><strong>Helm</strong> Combination of Ridder, Tiller and lines that connects the two</li>
+<li><strong>Hull</strong> The main body of the boat</li>
+<li><strong>Keel</strong> The central underwater fin that prevents sideslip and often contains ballast</li>
+<li><strong>Keel Box</strong> Fiberglass box part of the Hull from which the Keel extends into the water]</li>
+<li><strong>Jib Boom or Boomkin</strong> small spar that the foot of the Jib attaches to</li>
+<li><strong>Mast</strong> The vertical spar (pole) that supports the sails</li>
+<li><strong>Rudder</strong> The vertical blade in the water at the stern that steers the boat</li>
+<li><strong>Rudder Head</strong> Holds the Rudder and Tiller and has pintles that mount into gudgeons on the transom to form a Rudder hinge</li>
+<li><strong>Seat</strong> Two Companion’s (Aft) and Helm Person’s (Forward) seats Stern Back of the boat</li>
+<li><strong>Stern</strong> Back of the boat</li>
+<li><strong>Tiller</strong> The horizontal rod attached to the top of the rudder and in the Martin 16 a Joy Stick mounted on the back of the Keel Box with lines connecting it to the Tiller on the Rudder</li>
+<li><strong>Transom</strong> The flat portion on the Stern of the boat</li>
+</ul>
+<h2 id="standing-rigging-lines-that-support-the-mast"><a class="header" href="#standing-rigging-lines-that-support-the-mast">Standing Rigging: Lines that support the mast</a></h2>
+<ul>
+<li><strong>Forestay</strong> The cable that supports the mast from the bow (also known as a Headstay) when the Martin 16 Jib Stay is not hoisted</li>
+<li><strong>Shrouds</strong> Cables that support the mast from the sides of the boat</li>
+<li><strong>Spreaders</strong> Horizontal spars that spread the shrouds away from the mast</li>
+</ul>
+<h2 id="running-rigging-lines-that-control-and-adjust-sails"><a class="header" href="#running-rigging-lines-that-control-and-adjust-sails">Running Rigging: Lines that control and adjust sails</a></h2>
+<ul>
+<li><strong>Boom Vang</strong> A line that puts downward tension on the boom and Leech of the sail Cunningham A line controlling tension along a sail’s forward edge (luff)</li>
+<li><strong>Halyard</strong> A line used to raise a sail</li>
+<li><strong>Sheet</strong> A line used to adjust a sail against the force of the wind</li>
+<li><strong>Outhaul</strong> A line that pulls the clew (aft corner) of a sail toward the end of the boom Sails:</li>
+<li><strong>Mainsail</strong> The sail attached to the mast and the boom</li>
+<li><strong>Jib</strong> The sail between the forestay and the mast (also called a headsail) Spinnaker A large balloon sail used when sailing downwind</li>
+</ul>
+<h2 id="parts-of-the-sail"><a class="header" href="#parts-of-the-sail">Parts of The Sail</a></h2>
+<ul>
+<li><strong>Battens</strong> Stiffeners (usually wood or fiberglass) in the leech Clew Bottom back corner of the sail</li>
+<li><strong>Foot</strong> Bottom edge of the sail</li>
+<li><strong>Head</strong> Top of the sail</li>
+<li><strong>Leech</strong> Back edge of the sail</li>
+<li><strong>Luff</strong> Front edge of the sail</li>
+<li><strong>Tack</strong> Front lower corner of the sail</li>
+<li><strong>Telltales</strong> Pieces of yarn or ribbon that show wind direction (also known as trimtales)</li>
+</ul>
+<h2 id="sailing-terms"><a class="header" href="#sailing-terms">Sailing Terms</a></h2>
+<ul>
+<li><strong>Trim</strong> Pull in a sheet</li>
+<li><strong>Ease</strong> Let out a sheet</li>
+<li><strong>Luffing</strong> Fluttering or flapping of the sail</li>
+<li><strong>Windward</strong> Toward the wind</li>
+<li><strong>Leeward</strong> Away from the wind</li>
+<li><strong>Forward</strong> Toward the bow</li>
+<li><strong>Aft</strong> Toward the stern</li>
+<li><strong>Starboard</strong> The right side of the boat when looking forward Port The left side of the boat when looking forward</li>
+<li><strong>Starboard tack</strong> Sailing so the wind comes from the starboard side of the boat</li>
+<li><strong>Port tack</strong> Sailing so the wind comes from the port side of the boat</li>
+</ul>
+<h2 id="sailing-maneuvers"><a class="header" href="#sailing-maneuvers">Sailing Maneuvers</a></h2>
+<ul>
+<li><strong>Tacking</strong> To change direction by turning the boat’s bow through the wind (also known as coming about)</li>
+<li><strong>Jibe</strong> To change direction by turning the boat’s stern through the wind Head up To steer toward the wind direction</li>
+<li><strong>Head down</strong> To steer away from the wind direction</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basic-right-of-way-rules"><a class="header" href="#basic-right-of-way-rules">Basic Right of Way Rules</a></h1>
+<p>Be courteous, and avoid possible collisions!</p>
+<h2 id="portstarboard-rule"><a class="header" href="#portstarboard-rule">Port–Starboard rule</a></h2>
+<p>Port-tack boat must keep clear of the starboard tack boat</p>
+<h2 id="windward-leeward-rule"><a class="header" href="#windward-leeward-rule">Windward-Leeward rule</a></h2>
+<p>Windward boat must keep clear of a leeward boat on the same tack</p>
+<h2 id="clear-astern---clear-ahead"><a class="header" href="#clear-astern---clear-ahead">Clear astern - Clear ahead</a></h2>
+<p>Overtaking boat must keep clear of a boat clear ahead, whether it is a sailboat or a powerboat</p>
+<h2 id="the-boat-with-the-least-maneuverability-has-right-of-way"><a class="header" href="#the-boat-with-the-least-maneuverability-has-right-of-way">The boat with the least maneuverability has right of way</a></h2>
+<p>Usually boats under power need to keep clear of boats under sail. However, large naval or commercial ships have limited maneuverability, so smaller recreational boats need to keep clear of them. Also, small boats should give a large boat in a narrow channel adequate room to maneuver.</p>
+<h2 id="right-and-left-drift"><a class="header" href="#right-and-left-drift">Right and Left Drift</a></h2>
+<p>Get used to observing boats that present a concern for possible collision and sighting their position relative to your boat. Keep checking occasionally if their relative position for right or left drift. If another vessel is on a Constant Bearing with Decreasing Range (CBDR) then a potential collision exists. This can be avoided by simply changing your course or heading to pass astern of the other vessel.</p>
+<h2 id="telegraphing-your-intentions-to-pass-port-or-starboard"><a class="header" href="#telegraphing-your-intentions-to-pass-port-or-starboard">Telegraphing Your Intentions to Pass (Port or Starboard)</a></h2>
+<p>When approaching a vessel, that is nearly dead ahead, it is important to keep the bow of your boat to one side of the other vessel’s bow. Avoid allowing your bow to wander to the right and left of the other vessel’s bow since this will confuse that vessel’s helms person or skipper as to your intentions. If the other vessels skipper is experienced then they will keep their bow pointed to one side of your bow also ‘telegraphing’ their intention to pass to one side of your bow. If you find a vessel approaching that keeps veering right and left of your bow it may indicate they are inexperienced or distracted and you should make a course change to avoid passing close to the other vessel.</p>
+<h3 id="by-determining-early-the-right-of-way-situation-for-the-boats-closest-to-your-boat-and-monitoring-their-course-and-drift-you-can-prevent-situations-that-require-you-to-make-any-drastic-course-changes-to-avoid-a-collision-telegraph-your-intentions-early-with-other-boats-coming-towards-your-bow-and-monitor-the-drift-of-boats-closest-to-you-always-cross-astern-of-large-vessels-that-are-working-must-stay-in-a-channel-especially-ferries-harbor-patrol-boats-and-vessels-towing-or-fishing-early-monitoring-and-action-will-lead-to-an-uneventful-sail-do-not-assume-that-as-a-sailboat-you-automatically-have-right-a-way-over-power-boats-know-your-right-a-way-rules-but-know-that-the-most-important-rule-is-avoid-a-collision"><a class="header" href="#by-determining-early-the-right-of-way-situation-for-the-boats-closest-to-your-boat-and-monitoring-their-course-and-drift-you-can-prevent-situations-that-require-you-to-make-any-drastic-course-changes-to-avoid-a-collision-telegraph-your-intentions-early-with-other-boats-coming-towards-your-bow-and-monitor-the-drift-of-boats-closest-to-you-always-cross-astern-of-large-vessels-that-are-working-must-stay-in-a-channel-especially-ferries-harbor-patrol-boats-and-vessels-towing-or-fishing-early-monitoring-and-action-will-lead-to-an-uneventful-sail-do-not-assume-that-as-a-sailboat-you-automatically-have-right-a-way-over-power-boats-know-your-right-a-way-rules-but-know-that-the-most-important-rule-is-avoid-a-collision">By determining early the right of way situation for the boats closest to your boat and monitoring their course and drift you can prevent situations that require you to make any drastic course changes to avoid a collision. Telegraph your intentions early with other boats coming towards your bow, and monitor the drift of boats closest to you. Always cross astern of large vessels that are working, must stay in a channel, especially ferries, harbor patrol boats, and vessels towing or fishing. Early monitoring and action will lead to an uneventful sail. Do not assume that as a sailboat you automatically have right-a-way over power boats. Know your right-a-way rules but know that the most important rule is “Avoid a collision.”</a></h3>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="points-of-sail"><a class="header" href="#points-of-sail">Points of Sail</a></h1>
+<p><img src="./images/edition_07-points.gif" alt="Points of Sail" /></p>
+<p><a href="www.deecaffari.co.uk/en/did_you_know-edition_07.html">Dee Caffari &quot;Points of Sail&quot; <em>deecaffari.com</em>. 2009</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="identifying-wind-direction"><a class="header" href="#identifying-wind-direction">Identifying Wind Direction</a></h1>
+<p>It is necessary to understand where the wind is coming from, in order to know which direction to head your boat, and how to trim the sails. These are some ways to determine wind direction:</p>
+<p>Look at flags blowing in the wind.</p>
+<p>Look at the telltales on the shrouds or the sails.</p>
+<p>See which direction the wind vanes on nearby sailboats are pointing.</p>
+<p>Notice the direction that the waves or ripples from wind gusts are moving on the water.</p>
+<p>See that anchored boats face into the wind if the current is weak. Feel the wind on your face, and notice how your hair blows. Notice how other sailboats have their sails trimmed.</p>
+<p>When the mainsail <strong>fully</strong> luffs, the wind blows from the mast to the end of the boom (toward the clew).</p>
+<p>If you luff your sails and turn your boat until the boom is along the centerline of your boat, your bow will be pointing into the wind.</p>
+<h2 id="practice"><a class="header" href="#practice">Practice</a></h2>
+<p>Determine the wind direction while at the dock.</p>
+<p>Then sail out into the bay, and again try to determine the wind direction.</p>
+<h2 id="remember"><a class="header" href="#remember">Remember</a></h2>
+<p><strong>Windward</strong> means toward the wind. <strong>Leeward</strong> means away from the wind.</p>
+<p><img src="images/wind_indicator.png" alt="Wind indicator" />
+<img src="images/flag.png" alt="Sun behind flag" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sail-on-a-beam-reach"><a class="header" href="#sail-on-a-beam-reach">Sail on a Beam Reach</a></h1>
+<p>You are on a beam reach when the wind is blowing perpendicular to your boat (directly across the side), and your sails are halfway out.</p>
+<h2 id="practice-1"><a class="header" href="#practice-1">Practice</a></h2>
+<p>Start sailing so that the wind blows perpendicular to the direction you are traveling.</p>
+<p>Adjust the mainsail so it just starts to luff (flutter back and forth), and then trim in (pull in) slowly until the luffing stops. This gives you proper mainsail trim.</p>
+<p>Adjust your jib so it just starts to luff, and then trim in slowly until the luffing stops. Then fine-tune with the telltales:</p>
+<p>If, the <strong>inside</strong> telltale flutters up or down, trim in the sail gently until both telltales flow straight back.</p>
+<p>If the <strong>outside</strong> telltale flutters up or down, let out (ease) the jib until both telltales fly straight back.</p>
+<p>Steer a straight course, adjusting your sails as needed. If you need a short break from watching telltales, aim your sight over the bow of your boat to a spot onshore if possible, and head for that spot, checking the telltales periodically.</p>
+<p>If the wind is too strong, you can take some pressure off the joystick and bring the boat more upright (reduce heel) by letting out (easing) the mainsail a small amount.</p>
+<h2 id="beam-reach"><a class="header" href="#beam-reach">Beam Reach</a></h2>
+<p><img src="images/beam_reach.png" alt="Beam Reach" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sail-close-hauled-using-telltales"><a class="header" href="#sail-close-hauled-using-telltales">Sail Close-Hauled Using Telltales</a></h1>
+<p>When sailing upwind, telltales help you determine how high you can point toward the wind, and still maintain your speed.</p>
+<h2 id="practice-2"><a class="header" href="#practice-2">Practice</a></h2>
+<p>Start sailing on a beam reach.</p>
+<p>Head up toward the wind as you trim in (pull in) the jib to a position halfway between the mast and the shroud. Watch your jib telltales as you head up.</p>
+<p>Return the joystick to center when both the red and green jib telltales fly straight back. Trim in the mainsail so the boom is directly over the leeward stern corner of the boat. You are now sailing close-hauled. Keep the telltales flying straight back as you sail.</p>
+<p>If the <em><strong>inside</strong></em> telltale flutters, then <em><strong>head down</strong></em> by moving the joystick slightly to leeward (away from the wind). Then center the joystick when both telltales fly straight back.</p>
+<p>If the <em><strong>outside</strong></em> telltale flutters, <em><strong>head</strong></em> up by moving the joystick slightly to <em><strong>windward</strong></em> (toward the wind). Then center the joystick when both telltales fly straight back.</p>
+<p>This heading will allow you to stay close to the wind and maintain good boat speed. If the wind is too strong, you can take some pressure off the joystick and flatten the boat on the water by letting out (easing) the mainsail a small amount.</p>
+<p><strong>Hint:</strong> Move the joystick <em><strong>away</strong></em> from the direction of the fluttering telltales.</p>
+<h2 id="close-hauled"><a class="header" href="#close-hauled">Close Hauled</a></h2>
+<p><img src="images/close_hauled.png" alt="Close Hauled" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sail-on-a-broad-reach"><a class="header" href="#sail-on-a-broad-reach">Sail on a Broad Reach</a></h1>
+<p>You are on a broad reach when you are headed about 100°–140° from the wind, and your sails are about three-quarters of the way out.</p>
+<h2 id="practice-3"><a class="header" href="#practice-3">Practice</a></h2>
+<p>Start by sailing on a beam reach.</p>
+<p>Head down (turn your boat away from the wind) while letting your mainsail out, until the wind comes over the windward stern corner of your boat.</p>
+<p>Let out (ease) the mainsail until it just starts luffing, then gently trim it in until the luffing stops. Make sure the boom does not rub against the wire shroud. (The boom should always be at least 2 inches away from the shroud.)</p>
+<p>Let out (ease) the jib until it just starts luffing, and then gently trim it in until the luffing stops. The jib telltales may not be effective when on a broad reach.</p>
+<p>You are now sailing on a broad reach. Steer a straight course, keeping the wind over your windward stern corner and your sails full. Find a point on land to head for, if possible, to help you maintain a consistent heading.</p>
+<h2 id="hint"><a class="header" href="#hint">Hint</a></h2>
+<p>If your jib switches sides, you have headed down too far, and you are no longer on a broad reach. Head up by pointing the joystick gently to windward (away from the mainsail), until the jib is on the same side as the main. Then center the joystick.</p>
+<h2 id="broad-reach"><a class="header" href="#broad-reach">Broad Reach</a></h2>
+<p><img src="images/broad_reach.png" alt="Broad Reach" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sail-on-a-run-wing-on_wing"><a class="header" href="#sail-on-a-run-wing-on_wing">Sail on a Run (Wing-On_Wing)</a></h1>
+<p>When sailing with the wind directly behind you, your sails catch the wind better if you have the jib on one side, and the mainsail on the other. This is called sailing downwind, or wing-on-wing.</p>
+<h2 id="practice-4"><a class="header" href="#practice-4">Practice</a></h2>
+<p>Start by sailing on a beam reach.</p>
+<p>Head down (turn your boat away from the wind), while you let out (ease) your mainsail, until you are on a broad reach. The boom should be about 2 inches away from the wire shroud.
+Let out (ease) the jib until it is perpendicular to the boat. The jib telltales will not be effective.</p>
+<p>Gently move the joystick toward the boom, to turn the boat a bit more downwind. Return the joystick to center when the jib switches sides.</p>
+<p>You are now sailing on a run. Steer a straight course, keeping the wind over your stern and your sails full. Find a point on land to head for, if possible, to help you maintain a consistent heading.</p>
+<h2 id="hint-1"><a class="header" href="#hint-1">Hint</a></h2>
+<p>This requires very careful steering. If you head too high toward the wind, your jib will switch sides. If you steer too far downwind, your mainsail will switch sides in an “accidental jibe”. If you do jibe accidentally, gently move the joystick toward the boom to jibe back onto your original course.</p>
+<h2 id="wing-on-wing"><a class="header" href="#wing-on-wing">Wing on Wing</a></h2>
+<p><img src="images/wing_on_wing.png" alt="Wing on wing" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="martin-16-controls"><a class="header" href="#martin-16-controls">Martin 16 Controls</a></h1>
+<p>Martin 16 sailors sit on a seat facing forward and all controls and lines are led to the cockpit to allow sailing without having to leave the seat. The rudder is controlled with a joystick. There is a second seat behind the command seat for a passenger or instructor. With the keel extended the boat cannot be tipped.</p>
+<p>Once comfortably seated, the joystick tiller (to control the steering) and lines (to control the sails) are directly at hand making it possible to sail the boat independently without needing to change position. A second seat for an instructor or companion is located behind the sailor’s seat.</p>
+<p>Optional power-assist equipment can be added to the boat to allow individuals with weak arms to sail the boat using a joystick similar to those found on power wheelchairs. And for those who cannot move their arms at all the sip ’n puff system allows them to sail the boat using their breath! Even people on respirators can sail the Martin 16 independently!</p>
+<p>The Martin 16 is controlled by a deep, spade rudder which provides positive control under all wind and sea conditions, with minimum pressure required to the helm. The helmsperson uses a &quot;joystick&quot; to control the boat, and the movement of the joystick is transferred to the rudder via zero-stretch, high strength control lines guided by low-friction ball-bearing pulleys.</p>
+<p><img src="images/controls.png" alt="Controls" /></p>
+<p>Below all the running rigging controls are illustrated, showing how all sail controls are led to the cockpit in easy reach of the sailor.</p>
+<p><img src="./images/rigging_top_view.png" alt="running riffing controls" /></p>
+<h2 id="practice-5"><a class="header" href="#practice-5">Practice</a></h2>
+<p>Start once on the dock and you’ve found your boat. The participant should get into the front seat. Once the participant is onboard do the following:</p>
+<ul>
+<li>Release all the cleated lines inside the cockpit. Do not release the Spinnaker Halyard on the right just outside the cockpit and do not release the spinnaker sheets at the left and right shoulders on the Martin’s decks.</li>
+<li>Unclip the Vang and Cunningham from the bail on the Main/Jib cleats on the back/top of the Keel Trunk.</li>
+<li>The Companion can begin to attach the Jib Halyard, tack, and clew, then standing back while the Participant hoists the jib. Ensure the Jib Halyard is fully hoisted with enough tension to cause the forestay to become slack.</li>
+<li>Next the Companion can retrieve the boom with the Participants help and attach the tack and clew.</li>
+<li>While the Companion is working with the Main, the Participant can attach the Vang to the boom leaving it loose and uncleated.</li>
+<li>Next the Companion attaches the Main Halyard and guides the luff bolt rope into the mast’s sail slot while the Participant hoists the Main Halyard until the Mainsail is tugging on the boom.</li>
+<li>The Companion lifts the Boom and attaches it to the Gooseneck on the Mast while the Participant finishes hoisting the Main Halyard until there is some tension on the Mainsail’s Luff.</li>
+<li>With the Mainsail up the Participant can attach the Vang to the Boom and cleat off the Vang line then hand the Cunningham Hook to the Companion who attaches it to the Mainsail Cunningham Cringle about 8 inches above the Tack and the Participant then cleats the Cunningham line.</li>
+<li>At this point the Participant can set the Outhaul for the expected wind conditions and cleat it, check to see that the Jib Tension is cleated off and the Main and Jib Sheets are not cleated.</li>
+<li>The Companion can now untie and stow the Stern and Bow lines, climb aboard while Dock Assistant holds the Martin’s shroud, and the Participant checks that the tiller is free and clear by moving left and right.</li>
+<li>With the tiller free, the Dock Assistant walks the Martin to the end of the dock and pushes the boat forward so the Participant can steer.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="changing-your-heading"><a class="header" href="#changing-your-heading">Changing Your Heading</a></h1>
+<p>When heading up in a Martin, it is best to pull in the jib first so it doesn’t flap around. Then pull in the mainsail once the wind pressure is off it. When heading down, let the mainsail out first, to take the pressure off the sail, which helps with steering and heeling (tipping). Then you can adjust the jib.</p>
+<h2 id="practice-6"><a class="header" href="#practice-6">Practice</a></h2>
+<p>Start by sailing on a beam reach. To head up to close-hauled:</p>
+<p>Check around and behind you for other boats. Pull the jib into its close hauled setting as you move the joystick to windward. Adjust your heading using the jib telltales.</p>
+<p>Pull in the mainsail until the boom is over the stern’s aft-leeward corner. To <strong>head down</strong> to a broad reach:
+Check for other boats, then let out the mainsail as you move the joystick to leeward. Center the joystick onto your new heading. Make sure the boom does not rub on the shrouds.</p>
+<p>Adjust the jib.</p>
+<h2 id="hint-2"><a class="header" href="#hint-2">Hint</a></h2>
+<p>Some sailors trim in or ease both sails at the same time by holding both lines (sheets) in one hand. For sailors using a PAU the jib and mail sheets trim the same amount allowing the PAU’s spools to trim both sails simultaneously.</p>
+<p><img src="./images/changing_your_heading.png" alt="heading up" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tacking-coming-about"><a class="header" href="#tacking-coming-about">Tacking (Coming About)</a></h1>
+<p>When you tack, you turn the boat <em><strong>into</strong></em> the wind, through the 90° “No-Go Zone” until your sails cross to the other side of the boat.</p>
+<h2 id="practice-7"><a class="header" href="#practice-7">Practice</a></h2>
+<p>Start sailing on a close-hauled heading, with your sails trimmed to the correct position, and your telltales flying straight back.</p>
+<ol>
+<li>Say “READY TO TACK?” to let your companion know you plan to change direction.</li>
+<li>Check your surroundings for other boats, or have your companion check for you.</li>
+<li>Say “TACKING”, and smoothly move the joystick all the way to windward. You do not have to
+adjust the sails. The sails will switch to the other side of the boat as your direction changes.</li>
+<li>Center the joystick when your sails start to fill.</li>
+<li>Check your telltales and adjust your heading as needed.</li>
+<li>“READY ABOUT” and “HARD-TO-LEE” are sometimes used instead of “READY TO TACK” and
+“TACKING”.</li>
+</ol>
+<p><img src="./images/tacking.png" alt="tacking" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="jibing"><a class="header" href="#jibing">Jibing</a></h1>
+<p>You jibe when you turn your boat <em>**away from **</em> the wind, and the boom crosses quickly to the other side of the boat.</p>
+<h2 id="practice-8"><a class="header" href="#practice-8">Practice</a></h2>
+<p>Start sailing on a broad reach, with your sails perpendicular to the boat. Make sure the boom is at least 2 inches away from the wire shroud.</p>
+<ol>
+<li>Say “READY TO JIBE” to let your companion know you what you are planning.</li>
+<li>Check your surroundings for other boats.</li>
+<li>Say “JIBING”, and start pulling in the mainsheet.</li>
+</ol>
+<p>As soon as the boom crosses to the other side of the boat, let the mainsheet slide out rapidly until the boom is again about 2 inches off the shroud, and immediately center the joystick. Do not let the boom hit the shroud. The jib will switch sides without you tending the jib sheet.</p>
+<h2 id="hints"><a class="header" href="#hints">Hints</a></h2>
+<p>Pulling in the mainsheet and then letting it out lets you control the mainsail as it crosses the boat. Your companion can control the mainsheet from their position if needed.</p>
+<p>“PREPARE TO JIBE” and “JIBE-HO” are sometimes used instead of “READY TO JIBE” and “JIBING”.</p>
+<p><img src="./images/jibing.png" alt="jibing" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="safety-position"><a class="header" href="#safety-position">Safety Position</a></h1>
+<p>The safety position allows you to take a brief, controlled rest from sailing. <strong>Practice:</strong></p>
+<p>Start out sailing on a close reach.</p>
+<p>Ease the jib sheet and mainsheet until both sails are fully luffing.</p>
+<p>Keep your boat on the close reach heading. Your boat will glide to a stop. You are now in the safety position.</p>
+<p>To resume sailing, just trim in both sails, and the boat will start moving.</p>
+<p><img src="images/safety_position.png" alt="safety position" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sailing-a-straight-course"><a class="header" href="#sailing-a-straight-course">Sailing a Straight Course</a></h1>
+<p>Every time you move the joystick, it slows the boat. Sailing a steady, straight course is easier, less tiring, and faster.</p>
+<h2 id="practice-9"><a class="header" href="#practice-9">Practice</a></h2>
+<p>Start sailing on a heading of your choice (pick an object on shore in front of your bow). Once you’ve picked a course, trim your sails to the wind.</p>
+<p>Concentrate on trying to move the joystick as little as possible, while still maintaining your course. Focus on the feel of the boat as it responds to any small corrections that you make.</p>
+<p>If a gust of wind makes the boat head up toward the wind, push the joystick slightly toward the boom to resist that movement. Ease up the pressure on the joystick as you feel the gust end.</p>
+<p>After a few minutes, change your heading and sail trim. Notice if there is any difference in the movement needed on the joystick to maintain this new heading. Feel how the boat glides through the water.</p>
+<h2 id="hint-3"><a class="header" href="#hint-3">Hint</a></h2>
+<p>Movement with the joystick should be gentle and minimal. You are just trying to counteract the pressure of wind gusts and waves on the boat. Try not to over-steer.</p>
+<p><img src="images/sailing_straight_course.png" alt="sailing a straight course" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="changing-sail-trim-while-looking-ahead"><a class="header" href="#changing-sail-trim-while-looking-ahead">Changing Sail Trim While Looking Ahead</a></h1>
+<p>The mainsheet and jib sheet are positioned directly in front of the sailor, so there is no need to look at the lines while trimming in or easing out. It is more important to look ahead to see where you are going, while glancing briefly at the sails to see the effect of the trimming.</p>
+<h2 id="practice-10"><a class="header" href="#practice-10">Practice</a></h2>
+<p>Start sailing on a beam reach.</p>
+<p>Take one last look at where the jib sheet and mainsheet are located. Then without looking, try to first put your hand on the jib sheet, and then the mainsheet. Repeat this, until you are comfortable finding each line without looking.</p>
+<p>Check your surroundings for other boats.</p>
+<p><strong>Head up</strong> to close-hauled, while pulling in the jib sheet and the mainsheet, without looking at the lines. Keep your eyes focused up and ahead to where you are going, occasionally glancing at the sails. This can be done with the joystick pushing fore or aft.</p>
+<p>After a few minutes, <strong>head down</strong> to a broad reach, easing the main sheet and then the jib sheet. Keep your eyes focused ahead to where you are going.</p>
+<p>Repeat this procedure until it feels natural to handle the sheets without looking at your hands.</p>
+<p><img src="images/course_change.png" alt="course change" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="getting-out-of-irons"><a class="header" href="#getting-out-of-irons">Getting Out of Irons</a></h1>
+<p>You are “in irons” when your boat is stopped, you are headed directly into the wind with your sails luffing, and you are not able to steer normally.</p>
+<h2 id="practice-11"><a class="header" href="#practice-11">Practice</a></h2>
+<p>Start out “in irons.”</p>
+<p>Push and hold the joystick completely to one side. <strong>Be patient.</strong> The boat will drift backward and slowly turn.</p>
+<p>When the wind comes across the side of the boat, pull in both sheets push the joystick toward the boom, and resume sailing.</p>
+<p><img src="images/in_irons.png" alt="in irons" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="slowing-or-stopping"><a class="header" href="#slowing-or-stopping">Slowing or Stopping</a></h1>
+<p>Usually we want our boat to sail quickly, but sometimes it is useful to slow the boat when trying to avoid an obstacle.</p>
+<h2 id="practice-upwind"><a class="header" href="#practice-upwind">Practice Upwind</a></h2>
+<p><em><strong>How to Slow Down When Sailing Upwind:</strong></em></p>
+<p>Start sailing close-hauled. Let out one or both sails so that they luff, and your boat will slow down.</p>
+<h2 id="practice-downwind"><a class="header" href="#practice-downwind">Practice Downwind</a></h2>
+<p><em><strong>How To Slow Down When Sailing Downwind:</strong></em>
+Start sailing on a broad reach. Head your boat up toward the wind, keeping your sails out so they luff, and your boat will slow down.</p>
+<h2 id="practice-downwind-when-cannot-alter-course"><a class="header" href="#practice-downwind-when-cannot-alter-course">Practice Downwind When Cannot Alter Course</a></h2>
+<p><em><strong>How To Slow Down When Sailing Downwind If You Cannot Alter Course:</strong></em>
+Start sailing on a broad reach. Pull in both sails so they are over the centerline of your boat (pulled in tight). The boat will slow because your sails will be over-trimmed, and not catching the wind properly.</p>
+<h2 id="practice-stopping"><a class="header" href="#practice-stopping">Practice Stopping</a></h2>
+<p><em><strong>How to Stop the Boat:</strong></em></p>
+<p>Start sailing on any heading. Then head to a close reach and luff your sails completely in the safety position.
+IMPORTANT: In order to slow the boat when making a downwind or crosswind docking, it is usually necessary to drop the mainsail, and fully luff the jib. The companion sailor may also need to drag a paddle in the water to slow or stop the boat.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="man-overboard-mob-drill"><a class="header" href="#man-overboard-mob-drill">Man Overboard (MOB) Drill</a></h1>
+<p>Rescuing a potential “Man Overboard” is an essential skill for any sailor to know. You can practice retrieving a lifejacket or buoy, or sail close to an anchored mark and pretend it is your person in the water.</p>
+<h2 id="practice-12"><a class="header" href="#practice-12">Practice</a></h2>
+<p>Start out sailing on any heading.</p>
+<p>Throw the buoy overboard</p>
+<p>Immediately say, “MAN OVERBOARD”.</p>
+<p>Change your heading to a beam reach. <em><strong>Keep your eyes on your “MOB” buoy at all times.</strong></em></p>
+<p>After 5-10 seconds, tack and head again onto a beam or broad reach so you cross your “path”.</p>
+<p><em><strong>Head up</strong></em>, so you approach the “MOB” buoy on a close reach, and luff your sails so that your boat glides to a <em><strong>stop in the Safety Position.</strong></em></p>
+<p>Keep the “MOB” buoy to windward. Retrieve the “MOB.”</p>
+<h2 id="hint-4"><a class="header" href="#hint-4">Hint</a></h2>
+<p>This is called the <em><strong>Reach-Tack-Reach or Figure 8</strong></em>, which describes the procedure and pattern used.</p>
+<p>In a real “Man Overboard” situation, you should call “MAN OVERBOARD” loudly as soon as you saw see the person in the water, and return as described. Always approach the MOB slowly! If you have difficulty reaching the person, or getting them in your boat, radio for help <em><strong>immediately</strong></em> and try to flag down any other passing boat for assistance.</p>
+<p><img src="images/figure_8_rescue.png" alt="figure 8 rescue method" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="man-overboard-drill-using-quickstop"><a class="header" href="#man-overboard-drill-using-quickstop">Man Overboard Drill (Using Quickstop)</a></h1>
+<p>Man Overboard (MOB) is sometimes referred to as Crew Overboard (COB), and also sometimes as Person In Water (PIW). However, Man Overboard (MOB) is the term that is recognized universally among sailors.<sup>2</sup></p>
+<p><img src="images/mob_drill_quick_stop.png" alt="mob drill using quickstop" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="man-overboard-mob-drill-adapted"><a class="header" href="#man-overboard-mob-drill-adapted">Man Overboard (MOB) Drill “Adapted”</a></h1>
+<p>Rescuing a potential “Man Overboard” is an essential skill for any sailor to know. Most “Man Overboard” drills involve sailing away from the MOB briefly, then returning to where the person fell overboard. This drill is adapted for sailors who are not confident in their ability to return to the MOB. The goal is to stop the boat as soon as possible, so a person overboard can hopefully swim to the boat. You can practice the drill by retrieving a lifejacket or buoy, or sail close to an anchored mark and pretend it is your person in the water.</p>
+<h2 id="practice-13"><a class="header" href="#practice-13">Practice</a></h2>
+<p>Start out sailing on any heading.</p>
+<p>Throw the buoy overboard.</p>
+<p>Immediately say, “MAN OVERBOARD”. <em><strong>Keep your eyes on your MOB at all times.</strong></em></p>
+<p>Immediately release both the mainsheet and the jib sheet, and <em><strong>head</strong></em> up directly into the wind. Then continue turning until you are on a close reach heading in <em><strong>Safety Position with your sails luffing completely.</strong></em> You should glide to a stop.</p>
+<p>Drift toward the MOB. Retrieve the buoy if possible.</p>
+<p>In a real “Man overboard” situation, you should call “MAN OVERBOARD” loudly as soon as you see the person in the water, promptly release both the mainsheet and the jib sheet, and immediately start turning. If the person cannot reach the boat or you are unable to get them in your boat, radio for help <strong>immediately</strong>, and try to flag down any other passing boat for assistance.</p>
+<p><img src="images/mob_fast_stop.png" alt="mob fast stop" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="sailing-using-clock-positions"><a class="header" href="#sailing-using-clock-positions">Sailing Using Clock Positions</a></h1>
+<p>As sailors gain experience, they can have their companion use “clock positions” to give directions (see illustration the next page). This lets sailors trim sails and steer more accurately, and also helps them understand the movement of other boat traffic.</p>
+<h2 id="practice-14"><a class="header" href="#practice-14">Practice</a></h2>
+<p>Imagine that your boat is in the center of an analog clock face, with the 12 o’clock position straight ahead of the bow, and the 6 o’clock position directly behind your stern. The 3 o’clock position is directly to your right (starboard), and the 9 o’clock position is to your left (port).</p>
+<p>Start sailing close-hauled on port tack, and <em><strong>have your companion check your surroundings for other boats</strong></em>. When your companion asks you to, change your heading so your boat points toward the 3 o’clock position.</p>
+<p>Sail on this heading for about 15 seconds. After checking your surroundings, have your companion give a command to change to a 10 o’clock heading. (Remember, the 12 o’clock position is always the direction your boat is currently heading before you begin your maneuver).</p>
+<p>Continue practicing steering and changing direction as your companion gives a variety of clock directions, until you become familiar with how much turning and sail trim is required for each change.</p>
+<p>You can also practice having your companion tell you the location of other boat traffic using clock positions. For example, your companion can say, “There is a sailboat approaching us at 4 o’clock, about 50 yards away.” This allows you to orient yourself to traffic, and start preparing for any maneuvers that you may need to take to stay clear.</p>
+<p>Your companion may also give directions by saying, “Our next racing mark is at 2 o’clock.”</p>
+<p>If the companion gives clock position directions, and the jib sheets and mainsheet have been marked with whipping twine at the close-hauled, beam reach, and broad reach positions, then an experienced sailor with visual impairments will be able to sail with very little additional guidance.</p>
+<p><em>You may find yourself with experienced sailors <strong>‘old salts’</strong> that will use a combination of degrees off the Bow, Stern, or Beam, and terms such as forward quarter (roughly 45 degrees off the bow), Broad on the Beam (90 degrees from the Bow), or aft quarter (roughly 45 degrees ahead of the stern). As you continue to gain experience these directions will begin make sense.</em></p>
+<p><img src="images/clock_positions.png" alt="clock positions" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="part-2---the-basics-of-seamanship"><a class="header" href="#part-2---the-basics-of-seamanship">Part 2 - The Basics of Seamanship</a></h1>
+<h2 id="preparation"><a class="header" href="#preparation">Preparation</a></h2>
+<ol>
+<li><a href="./dressing_for_hot_or_cold.html">Dressing for Hot and Cold</a></li>
+<li><a href="./basic_knots.html">Basic Knots</a></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dressing-for-hot-or-cold"><a class="header" href="#dressing-for-hot-or-cold">Dressing for Hot or Cold</a></h1>
+<p>The essentials for what to wear sailing are most likely clothes you already have lying around at home, with a few important extras that you might want to consider making sailing a really enjoyable experience.</p>
+<h2 id="practice-15"><a class="header" href="#practice-15">Practice</a></h2>
+<p>We’ll start with the miserable sailing gear and get to the fun stuff at the end! Although you don’t want to consider that it might rain on your sailing adventure, you’ll be even more upset if it comes and you aren’t prepared.</p>
+<p>Sailing only really happens when it’s windy, and when it’s windy you get cold, and when it’s wet and windy you can get REALLY cold. Not great on a sailboat that doesn’t have heating!</p>
+<p>You want a really decent raincoat when you’re sailing, so that if the worst does happen you can still enjoy it.</p>
+<p>Get a waterproof jacket that’s also wind breaker. Even when it isn’t raining you can still get really cold when you’re out sailing, and a wind breaker jacket can make all the difference. As someone who used to sniff at ‘wind proof’ gear, Experience has made me a convert, and I don’t sail with anything less.</p>
+<p>Make sure it also has a hood. You will be so thankful for that, especially if there is spray coming over the boat. No one wants cold seawater running down their back on a rainy day!</p>
+<p>If you’re sailing in the height of summer, in occasional spray or rain, then waterproof trousers might be a little overkill. Still grabbing a cheap pair of waterproof trousers is recommended, just in case. Sailing is so much more comfortable when you have the right clothes for it.</p>
+<p>The best way to deal with the changing weather while you’re sailing is to be prepared with lots of layers of sailing clothes. It can be bathing suit weather one minute and freezing cold the next.</p>
+<p>Always bring a t-shirt, a long-sleeved top (preferably a thermal vest), a fleece top and then your raincoat that’s windproof as your final layer. The fleece top is the perfect sort of layer for sailing as it’s light and breathable, but will also keep you super warm.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="basic-knots"><a class="header" href="#basic-knots">Basic Knots</a></h1>
+<p>In order to understand an explanation on how to tie a knot some basic knot vocabulary is needed:</p>
+<p>Line anatomy – Line typically has two ends the ‘Standing Part’ (or end) which is where the line is attached to a load (e.g., a boat) and the ‘Bitter End’ the free end that is not attached to a load. A ‘bight’ is formed when a line’s “tail” is doubled over.</p>
+<p><img src="images/knot_vocabulary.png" alt="knot anatomy" /></p>
+<p>A ‘Bend’ generally refers to a knot used to tie two lines together, while a ‘hitch’ generally refers to tying a line to an object or to itself. However like English for every rule there’re lots of exceptions.</p>
+<p><img src="images/sheet_bend_clove_hitch.png" alt="sheet bend and clove hitch" /></p>
+<p>Typical line types seen in boating are:</p>
+<ul>
+<li>3-Strand used for dock lines and tow lines. It’s the easiest to splice.</li>
+<li>Double Braid used for running rigging</li>
+<li>Plaited line is used for anchor rode.</li>
+<li>Hollow Braid is used with polypropylene life lines attached to Rescue Rings for throwing to persons in the water. Polypropylene will float making it easier to see in the water.</li>
+</ul>
+<p><img src="images/line_types.png" alt="line types" /></p>
+<h2 id="some-basic-knots"><a class="header" href="#some-basic-knots">Some Basic Knots</a></h2>
+<ol>
+<li>
+<p><strong>Figure Eight</strong> – Sometimes referred to as a stopper knot, it makes a knot that won’t slip out. Tied with a bight it also forms a secure, non-slip loop at the end of a rope. It’s a common knot used by mountain climbers, but comes in handy for securing to a mooring.</p>
+<p><a href="https://www.animatedknots.com/figure-8-knot">animatedknots.com Figure 8 Knot</a></p>
+<p><img src="images/figure_8_knot.png" alt="figure 8 knot" /></p>
+</li>
+<li>
+<p><strong>Square Knot</strong> - Also called a reef knot, it’s an ancient knot from old school mariners. It’s a simple concept for securing a rope or line around an object. It can also be used to join two ropes together. Put a bight in the second half of the square knot and you have a slipped reef knot.</p>
+<p><a href="https://www.animatedknots.com/square-knot">animatedknots.com Square Knot</a></p>
+<p><a href="https://www.youtube.com/watch?v=-EPGC_rp7tU&amp;ab_channel=GuiadeN%C3%B3s-">Video Slipped Reef Knot</a></p>
+</li>
+<li>
+<p><strong>Cleat Hitch</strong> - Also referred to as a halyard knot. If you’re working with a cleat, use a cleat hitch. It’s a quick knot for securing your vessel/halyards, and it comes undone with ease. Easy on &amp; off.</p>
+<p><a href="https://www.animatedknots.com/cleat-hitch-knot-dock-line">animatedknots.com cleat hitch</a></p>
+<p><img src="images/cleat_hitch.png" alt="cleat hitch" /></p>
+</li>
+<li>
+<p><strong>Bowline</strong> - A reliable choice that creates a fixed loop at the end of a
+line. It’s a knot that won’t jam and can be untied even under extreme
+tension. As long as it’s under constant load the bowline won’t slip,
+but under an intermittent load it can fail if the ‘bitter end’ is too short.</p>
+<p><a href="https://www.animatedknots.com/bowline-knot">animatedknots.com bowline knot</a></p>
+<p><img src="images/bowline.png" alt="images" /></p>
+</li>
+<li>
+<p><strong>Anchor Hitch</strong> - Also called an anchor bend knot. If you don’t use a chain and need to keep your anchor tethered to the anchor rode, this is the ideal choice. Once you’ve mastered it, it’s a quick go-to choice.</p>
+<p><a href="https://www.animatedknots.com/anchor-hitch-knot">animatedknots.com anchor hitch</a></p>
+<p><img src="images/anchor_hitch.png" alt="anchor hitch knot" /></p>
+</li>
+<li>
+<p><strong>Clove Hitch</strong> - A quick temporary knot for tying moving objects to fixed ones or to secure fenders. Be careful, this knot can come undone if both objects aren’t stable. A quick solution knot, made more permanent when finished with three half hitches.</p>
+<p><a href="https://www.animatedknots.com/clove-hitch-knot-rope-end">animatedknots.com clove hitch</a></p>
+<p><img src="images/clove_hitch.png" alt="clove hitch knot" /></p>
+</li>
+<li>
+<p><strong>Sheepshank</strong> - A classic boating knot used to shorten a length of rope or take up slack. It’s not a stable knot and will come undone under too much, or too little, load but it’s a very handy for organizing and setting several lines you’re working with.</p>
+<p><a href="https://www.animatedknots.com/sheepshank-knot">animatedknots.com sheepshank</a></p>
+<p><img src="images/sheepshank.png" alt="sheepshank knot" /></p>
+</li>
+<li>
+<p><strong>Trucker’s Hitch</strong> - One of the most versatile knots there is, not just for boating but in many outdoor activities. Don’t let the video intimidate you, it’s quick and easy. It’s a great knot for securing equipment into position and it utilizes a quick release to make unloading/changing out items efficient and simple. 1(a) Or some sailors have gone to the Alpine Butterfly Loop used the same way but much easier to untie after being under load.</p>
+<p><a href="https://www.animatedknots.com/truckers-hitch-knot-quick-release">animatedknots.com trucker's hitch quick release</a></p>
+<p><img src="images/truckers_hitch.png" alt="trucker's hitch knot" /></p>
+</li>
+<li>
+<p><strong>Alpine Butterfly Knot</strong> - The butterfly loop, also known as lineman's loop, butterfly knot, alpine butterfly knot, Swiss loop and lineman's rider, is a knot used to form a fixed loop in the middle of a rope. One advantage is it unties easily after a load than a slip knot when used in a truckers hitch.</p>
+<p><a href="https://www.animatedknots.com/alpine-butterfly-loop-knot">animatedknots.com alpine butterfly loop knot</a></p>
+<p><img src="images/alpine_butterfly.png" alt="alpine butterfly knot" /></p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="beyond-sailing-the-boat"><a class="header" href="#beyond-sailing-the-boat">Beyond Sailing the Boat</a></h1>
+<ol>
+<li><a href="./adjusting_and_depowering_sails.html">Adjusting and Depowering Sails</a></li>
+<li><a href="./line_handling.html">Line Handling</a></li>
+<li><a href="./reefing.html">Reefing</a></li>
+<li><a href="./stowing_sails.html">Stowing Sails</a></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="adjusting-and-depowering-sails"><a class="header" href="#adjusting-and-depowering-sails">Adjusting and Depowering Sails</a></h1>
+<p>Depowering a sailboat generally starts with setting the outhaul tightly or putting in a snug “Flattening Reef” to flatten the bottom half of the Mainsail. Followed by setting the Jib sheet cars aft to flatten the bottom half of the Jib. This reduces the draft on both sails and opens the slot between Jib and Main. The Main can be further depowered by easing the vang to allow the top half of the main to twist off and spill excess wind.</p>
+<h2 id="practice-16"><a class="header" href="#practice-16">Practice</a></h2>
+<p>On the Martin 16 the Outhaul can be tightened to flatten the lower half of the Main and the vang loosened to allow the Main to twist and spill excess wind in the top of the sail. The Jib Halyard can be set tighter to pull the Mast bending it forward further flattening the Main but not so tight the aft end of the Jib Boom drags on the deck.</p>
+<p>The Main Halyard should be set tight enough to set a vertical wrinkle in the Main’s Luff which will relax some once underway and can be adjusted with the Cunningham.</p>
+<p>Once underway in a breeze it’s important not to over sheet the Jib and in a beat to trim the Main so the back half of the second batten above the boom is kept parallel to the boat’s centerline. Some air will be spilled out of the top of the Main which reduces heel while still maintaining hull speed on a beat or close reach.</p>
+<p>Over sheeting will hook the lower Main Sail battens to windward slowing the boat and will close off the slot between Jib and Main reducing the power down low on the main. Excessive heel will generate more leeway affecting course over the ground on a beat. So let the sails breathe by not over sheeting. Use the telltales to point as high as possible with proper trim, allowing the inner telltales to lift and the Main’s Leech telltales to ‘flutter’ while streaming.</p>
+<p>Remember the Martin 16 was developed to sail on Canadian waters where higher winds are frequent so the boat sails well when heeled over up to 29 degrees, and the Martin 16 was designed to be able to sail heeled up to 30 degrees and not swamp from heeling. So relax, don’t over sheet, and enjoy windy days on the water!</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="line-handling"><a class="header" href="#line-handling">Line Handling</a></h1>
+<p>The Martin 16 is designed to ‘gang sheet’ the sails (trimming both sails by pulling both sheets in the same hand together). This allows the Power Adapter Unit to use one motor and two spools to control the Jib and Main sheets at the same time.</p>
+<p>All lines are led to the cockpit in easy reach from the front seat. The heavy keel and smaller sail plan means the most common error in sheeting is having the sheets in too tight, slowing the boat. It is recommended that you mark the deck half way between the mast and the gunnel and set the Jib at that point to sail upwind. If others are sailing as fast but higher than you it is probably that you are not letting the inner jib telltales to lift, especially on puffs. In winds above 15 knots you may find the Martin moves quickly upwind with the inner jib telltales pointing nearly straight up!</p>
+<p>From a broad reach to a beat, check your jib luff and main leech telltales frequently to ensure they are flowing. If any of the outside jib or main’s leech telltales are drooping or flowing forward then your sails are stalled and you need to let sails out or possibly head up to reestablish flow.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="reefing"><a class="header" href="#reefing">Reefing</a></h1>
+<p><img src="images/reefing.png" alt="reefing" /></p>
+<p>On most keelboats the mainsail can be made smaller by ‘reefing.’ This will reduce the sail area to depower the rig. On the Martin 16 reefing is unavailable, however the architect made the sail area of the Martin to withstand winds well above 20 knots. So, if the conditions seem to be exceeding the Martin 16’s ability, it is time to return to the dock or lower the mainsail and request a tow, albeit Challenged Sailors will always determine the conditions before allowing their boats to go out and if a small craft advisory (25 to 33 knots) are out of expected to be out during the sail, they will cancel sailing. In some cases, with participants or volunteers with less experience sailing may be curtailed when small craft exercise caution (winds of 15 to 19 knots) is announced.</p>
+<p>If you are using a boat that can be reefed the rule of thumb is if you are considering weather to reef, then you should reef. This is especially true at the dock since reefing at the dock is safer than underway. Also remember that the mainsail in higher winds should have a snug foot wo ensure the reef also has a snug foot. Setting too much draft is counter to the objective of reefing which is to reduce sail area and while flattening the mainsail. Jibs on smaller boats can rarely be reefed unless they are on a roller furler and may develop too much draft when partially furled. Many clubs insist if you have too much wind while docking then drop the main and sail in on the jib.</p>
+<p>For small boats without reef points on the main a method called a “Fisherman’s Reef” can be used. A Fisherman’s Reef involves easing the main until the top and leading edge of the sail begins to luff and while the leech is still catching wind. This takes some practice and skill but can be very helpful in reducing heel and preventing the boat from turning into the wind uncontrollably in higher winds and gusty conditions. As described by Herb Benavent on the web site <a href="RiggingDoctor.com">Rigging Doctor.com</a>: <em>A Fisherman's Reef is when you ease the mainsheet and sheet in the jib. This
+will create a bubble in the main that will take away the mains power. This is a very temporary
+fix that can help to depower the main during a blow.</em> <a href="https://www.riggingdoctor.com/life-aboard/2016/2/10/alternatives-to-reefing">riggingdoctor.com alternatives to reefing</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="stowing-sails"><a class="header" href="#stowing-sails">Stowing Sails</a></h1>
+<p>On today’s sailboats the sailor is handling a wide variety of sail materials from Dacron polyester with coatings to reduce porosity improving performance to Genoas made of a mylar substrate supporting carbon fibers run along computer generated stress lines. All of these sail types are best preserved by stowing them away from the Sun’s UV light, keeping them dry, and covered to avoid collecting dust.</p>
+<p>One thing that sailors can do to maximize the life and performance of these sails is never to intentionally crease them. DO NOT FOLD YOUR SAILS! Sails will perform best and last the longest if they are rolled and not folded.</p>
+<h2 id="practice-17"><a class="header" href="#practice-17">Practice</a></h2>
+<p>When putting the Martin 16 sails away:</p>
+<ul>
+<li>Pull the head of the jib or main down to foot of the sail avoiding creasing the middle of the sail.</li>
+<li>Roll the sails loosely from its middle to the foot, use a tube along the center of the Mainsail
+and roll the sail being careful to keep the tube parallel to the battens.
+(Why not roll from the foot to the head? You can, the difference is the convenience of rigging the boat the next. When the sails are rolled from the middle then the head, tack, and clew can be attached without unrolling the sail. Once the halyard, tack and clew are attached and the boom mounted on the gooseneck, the sail can then be hoisted to unfurl it.)</li>
+<li>Once both Main and Jib are rolled then put them together and slide them into the sailbag with the same number. All hulls, sails, and sailbags are numbered.</li>
+</ul>
+<p>When you stow sails, they should not be set against or on anything that can corrode or rust as this can cause serious damage to a sail. NEVER DRAG A SAIL ACROSS CONCRETE since this can damage the sail and any coatings applied. Dacron sails made more porous allows wind to go through the sail material rather to being deflected by the sail. Mylar sails are also sensitive to chafe causing damage to the high strength, low stretch fibers glued to the surface of the Mylar substrate.</p>
+<p>Stowed sails should be covered and protected from dust, chafe, and UV light.</p>
+<p>You will find that even on larger boats when sails are stowed, more and more they are being rolled and placed in long zippered sail bags which are passed below and placed in a bunk or on the floor to allow them to lay out with no folds. The only sails that are stowed in a bag in a wadded condition are spinnakers due to their large size and material that does not lend itself to rolling.</p>
+<p><img src="images/sail_folding.png" alt="stowing sails" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="environment"><a class="header" href="#environment">Environment</a></h1>
+<ol>
+<li><a href="./weather.html">Weather</a></li>
+<li><a href="./offshore_and_onshore_winds.html">Offshore and Onshore Winds</a></li>
+<li><a href="./tides_and_currents.html">Tides and Currents</a></li>
+<li><a href="./aids_to_navigation.html">Aids to Navigation</a></li>
+<li><a href="./charts.html">Charts</a></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="weather"><a class="header" href="#weather">Weather</a></h1>
+<p>Excerpt from:</p>
+<p>5 Things to Consider Regarding Weather</p>
+<p>BY: ASA LEARN TO SAIL, SAILBOATS, WEATHER</p>
+<p>At the core of all we do as sailors is one thing – weather. It’s is our engine, our bliss or our most frightening adversary. Let’s start with the basic ideas surrounding weather. Here’s a little list of things to think about as it pertains to weather.</p>
+<h2 id="check-the-weather"><a class="header" href="#check-the-weather">Check the Weather</a></h2>
+<p>The first thing to always remember is to simply check the marine weather forecast before leaving the dock. Of course, this is obvious, but so many sailors look out the window, see the sun, raise the main and off they go. The VHF has a dedicated channel that continually plays the weather forecast, and you can find National Oceanic and Atmospheric Administration (NOAA) local predictions for your area on the Web.</p>
+<h2 id="watch-the-waves"><a class="header" href="#watch-the-waves">Watch the Waves</a></h2>
+<p>The behavior of the waves will tell a sailor quite a bit. Not all of us have anemometers but we all can keep our eyes on what’s happening with wave action and understand how much wind is present. Knowing the speed of the wind is important in determining the proper sail trim. Here’s what to look for:</p>
+<p>5-knots of wind creates small wavelets in the water.</p>
+<p>10-knots of wind scattered whitecaps appear.</p>
+<p>15-knots the wind forms significant waves – many of them with breaking tops.</p>
+<p>20-knots the wind begins to kick up spray and life on the water can get a bit more intense.
+And, don’t forget another source for waves, Power Boat Wakes, Be Aware and Take on Wakes at a 45 to 60 degree Angle!</p>
+<h2 id="dress-for-success"><a class="header" href="#dress-for-success">Dress for Success</a></h2>
+<p>Always keep or bring clothing that accommodates a change in weather. Dress in layers, it’s easy to look outside, in El Cajon, see a burning sun and forget that the Marine Layer can have San Diego Bay socked in with clouds. Being underdressed can compromise the mission. Have the right clothes and keep them on hand so your day on the water is comfortable!</p>
+<p><a href="https://asa.com/news/2021/03/30/5-things-to-consider-regarding-weather/">Follow Link to Read More</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="offshore-and-onshore-winds"><a class="header" href="#offshore-and-onshore-winds">Offshore and Onshore Winds</a></h1>
+<p>A sea breeze or onshore breeze is any wind that blows from a large body of water toward or onto a landmass; it develops due to differences in air pressure created by the differing heat capacities of water and dry land. As such, sea breezes are more localized than prevailing winds. Because land heats up much faster than water under solar radiation, a sea breeze is a common occurrence along coasts after sunrise. By contrast, a land breeze or offshore breeze is the reverse effect: dry land also cools more quickly than water and, after sunset, a sea breeze dissipates and the wind instead flows from the land towards the sea. Sea breezes and land breezes are both important factors in coastal regions' prevailing winds.</p>
+<p><img src="images/winds.png" alt="images" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tides-and-currents"><a class="header" href="#tides-and-currents">Tides and Currents</a></h1>
+<p>In San Diego the Tides occur in a semi-diurnal cycle (twice a day) occasionally causing ‘King Tide’ currents up to 3 knots to flow in and out of San Diego Bay. Offshore the California Current transits from north to south at roughly .68 mph with diurnal fluctuations due to the tides. In addition there is a California Inshore Counter Current that moves north. These currents are responsible over centuries for the formation of the Silver Strand enclosing San Diego Harbor with sediments primarily from the Tijuana River.</p>
+<p>Due to a strong north to south average wind circulating along the coast of California combined with the Earth’s Coriolis affect causes an upwelling current that brings nutrient rich water from the deep ocean to the surface along the California Coast. This is why the Gray Whales follow the Coastline to their breeding grounds along the Baja Peninsula rather than take the shorter direct route from their feeding grounds in Alaska.</p>
+<p>The California Current and prevailing winds from the North contribute to a prolific yacht delivery business on the West Coast. Yacht owners enjoying sailing south downwind and down current but prefer to hire Captains to return their yachts north to their homeports.</p>
+<p><img src="images/tides_and_currents.png" alt="tides and currents" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="aids-to-navigation"><a class="header" href="#aids-to-navigation">Aids to Navigation</a></h1>
+<p>Refer to: <a href="https://www.pacificarea.uscg.mil/Our-Organization/District-13/District-Staff/-dpw/-paton/">United States Coast Guard: Waterways Management Branch</a></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="charts"><a class="header" href="#charts">Charts</a></h1>
+<p>Navigation Charts are something every sailor ought to be familiar with. If you own your own keelboat and plan to sail outside of your local sailing area, or want to know more about the area that you currently sail in then a local chart is essential. A Chart Book can be purchased that covers the local area and has the charts bound for convenient use. There are many symbols and abbreviations on a chart and getting familiar with some of them is important. The comprehensive reference is called Chart One and can be found at this link online.</p>
+<p><a href="https://msi.nga.mil/api/publications/download?key=16694005/SFH00000/ChartNo1.pdf&amp;type=vie">Chart One</a>.</p>
+<p>However charts will have applicable symbols and abbreviations printed on the chart for the area the chart covers. NOAA now offers custom printed charts with an application produced by ESRI.</p>
+<p>CSSD sails in an area confined enough and with adequate visibility that a chart is not required.</p>
+<p><img src="images/navigation_chart.png" alt="chart" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="safety"><a class="header" href="#safety">Safety</a></h1>
+<ol>
+<li><a href="./cold_and_heat_effects.html">Cold and Heat Effects</a></li>
+<li><a href="./electrical.html">Electrical</a></li>
+<li><a href="./grounding.html">Grounding</a></li>
+<li><a href="./anchoring.html">Anchoring</a></li>
+<li><a href="./equipment.html">Equipment</a></li>
+<li><a href="./first_aid.html">First Aid</a></li>
+<li><a href="./signaling_help.html">Signaling Help</a></li>
+<li><a href="./vhf_basic_operation.html">VHP Basic Operation</a></li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="cold-andheat-effects"><a class="header" href="#cold-andheat-effects">Cold andHeat Effects</a></h1>
+<p>An excerpt from an article in Sailing World</p>
+<h2 id="sailing-body-heat-regulation---spinal-cord-injury"><a class="header" href="#sailing-body-heat-regulation---spinal-cord-injury">Sailing, Body Heat Regulation - Spinal Cord Injury</a></h2>
+<h3 id="by-lynn-fitzpatrick-on-11-oct-2007"><a class="header" href="#by-lynn-fitzpatrick-on-11-oct-2007">by Lynn Fitzpatrick on 11 Oct 2007</a></h3>
+<p>A normal, healthy human is able to maintain a constant body temperature of approximately 98.6F
+despite the temperature of the environment.</p>
+<p>As we saw in this week’s Chicago Marathon, even an elite athlete’s body can overheat to the
+point of no return. Barely functioning body heat regulation for a sailor with a spinal cord injury is a</p>
+<p>consequence that many able-bodied people don’t think about.</p>
+<p>Most people with complete spinal cord injuries do not sweat below the level of the injury. This means that they need to monitor and control their environmental conditions.</p>
+<p>If you remember your science class on cold blooded animals, you’ll remember that these animals
+have an inside body temperature that is controlled by the outside temperature of the
+environment.</p>
+<p>Blood vessels do not dilate and contract appropriately to enable the person with a spinal cord injury to cool down or conserve heat in the same manner of the rest of us. The nerves that used to allow messages to fire back and forth telling blood vessels to dilate or constrict, are damaged
+and interrupted.</p>
+<p>A comfortable range for many of our sailors with spinal cord injuries is 70-80° Fahrenheit.(21-27
+centigrade.)</p>
+<p>Once the outside temperature rises above 90° Fahrenheit (32 degrees centigrade), especially when the humidity is high, the body temperature will begin to rise and they will develop elevated body temperatures. Loss of energy and general malaise are symptoms that if left untreated may lead to heat stroke. Likewise, in cold conditions, they have a tendency to become hypothermic.</p>
+<p>Many of our sailors with spinal cord injuries know their 'safe window' in terms of their exposure at different temperatures and humidity levels and team mates and coaches have to pay close attention to symptoms and comfort levels.</p>
+<p>As this week’s US Olympic and Paralympic Sailing Trials go on, the physical and psychological
+demands of a long regatta will affect everyone differently.</p>
+<p>All of us must appreciate the added demands on our sailors with spinal cord and other injuries as
+they race for the opportunity to represent their countries US in Qingdao, China next year where
+the hot Qingdao Tiger roars through the end of August and then it starts to cool down.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="electrical"><a class="header" href="#electrical">Electrical</a></h1>
+<p><em>An excerpt from a BoatUS article</em></p>
+<p><a href="https://www.boatus.com/expert-advice/expert-advice-archive/2015/july/power-line-hazards">Link</a></p>
+<p>According to the U.S. Coast Guard, should your boat come in contact with a power line, don't jump into the water. The electrical charge may pass through your boat and electrify the surrounding water. The safest approach is to stay in the boat and avoid touching anything metal. Leave the boat only after it has moved away from the line.</p>
+<p>It's not just on the water where power lines can be dangerous. BoatUS claim files show that other boats have hit power lines while at launch ramps. A few years ago a Seaworthy editor was pulling his 22-foot sailboat out of a boat ramp at a small lake in Washington state after a sail with his family. He brought the boat to the staging area to lower the mast and prep the boat for the road when he was startled to hear what sounded like angry bees near the top of his mast. The sound it turned out was not from angry bees, but an angry high-voltage line that was not far from the top of the boat's aluminum mast. The boat was quickly moved away from the power line and the mast lowered. If anyone had been touching the mast and the electricity jumped from the line, they could have been electrocuted. The small-boat ramp was not designed with sailboats in mind; a boat with even a slightly taller mast could have created a disaster.</p>
+<p>Look up and carefully scan the area for power lines before raising your mast — and don't forget to check again as you bring the boat out of the water. Older launch ramps are more likely to have low power lines that can snag an unwary sailor.</p>
+<p>Apply the same rules used at home for internal electrical systems on boats. Turn off the circuit if you plan on working on an electrical circuit.</p>
+<p>For boats large enough to “Bond” the mast, rigging, lifelines, motor, and electrical system ground should be tied to an external zinc electrode. Do not tie hot AC return or even a DC return to the Zinc since it is possible to electrify the water immediately around the boat making it dangerous for swimmers. Bonding the boat’s metal to an external zinc can reduce electrolysis of certain metals onboard as well as direct a lightning strike’s current to the water via the zinc electrode.</p>
+<p>To complete connections between these components for the purpose of bonding, the conductors should be a minimum of #8 AWG. If doing double duty as a lightning-protection system, they must be a minimum of #6 AWG.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="grounding"><a class="header" href="#grounding">Grounding</a></h1>
+<p>No, this is not referring to electricity rather the contact of your keel to the bottom. Do not test the depth beyond narrow channel markers by sailing past the line of buoys. In the channel leading to the CSSD docks the shore side beyond the buoys has a steel barrier and rocks just beneath the water. This barrier does not show until a very low tide.</p>
+<p>Be wary of lee shored any change in water color should be met with suspicion and the prudent skipper will turn away towards deep water!</p>
+<p>Due to the small size of our Martin 16s we do not carry anchors and our purpose does not include stopping anywhere but at our home docks so our participants and volunteers should focus on sailing the boats in deep water away from the shorelines.</p>
+<p><img src="images/grounding.png" alt="grounding" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="anchoring"><a class="header" href="#anchoring">Anchoring</a></h1>
+<p>If you’re working on the Chase Boat and need to anchor, you may find one in the plastic Milk Crate and it will have limited effective depth, perhaps 20 feet. For a temporary anchoring, you‘ll need about 60 feet of rode plus the chain and anchor for 3 to 1 scope. If there’s a current, choppy conditions, or strong wind you may need more scope, 5 to 1, or optimally 8:1 if there’s that much (160’ for 20’ of depth) onboard. Remember to count freeboard into depth.</p>
+<p>Once the anchor is dropped and the boat backed up some distance, then wait until the end of the rode is reached and the anchor starts to set. Put your hand on the rode outside the boat and feel as the anchor digs in and sets. If you feel movement then your anchor is not setting and you may need more rode. I suggest paying out rode in one depth increments at a time (e.g., 20 feet for 20 foot depth) then feeling the rode to see if the anchor sets.</p>
+<p>To take up the anchor, take in the rode pulling/motoring the boat forward until the rode is vertical. If the anchor is free then haul it in rinsing it a few times before bringing onboard. If the anchor isn’t free then run the rode around the bow cleat and take the slack out letting the bobbing of the boat break it free and once free haul it in, rinsing before bringing aboard.</p>
+<p>If the anchor feels caught on something ease a few feet of rode and cleat it off then motor in a circle. The rotating orientation should free the flukes from whatever it’s caught on, then haul it up. The best practice is to attach a Trip Line to the crown of the anchor.
+If your engine stops and will not start, lower the anchor to avoid grounding, then radio for assistance.</p>
+<p><img src="images/anchoring.png" alt="anchoring" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="equipment"><a class="header" href="#equipment">Equipment</a></h1>
+<h2 id="required-by-law"><a class="header" href="#required-by-law">Required by Law</a></h2>
+<ul>
+<li>Life Jackets</li>
+<li>Navigation Lights (night use only)</li>
+<li>Sound Signaling Devices</li>
+<li>Visual Distress Signals (Coastal Waters Only)</li>
+<li>Throwable Type IV Life Preserver (boat cushion)</li>
+</ul>
+<h2 id="recommended"><a class="header" href="#recommended">Recommended</a></h2>
+<ul>
+<li>Cellphone</li>
+<li>VHF Radio</li>
+<li>Sunscreen</li>
+<li>Foul Weather Jacket</li>
+<li>First Aid Kit</li>
+<li>Water</li>
+<li>Sweet Snack</li>
+<li>Knife</li>
+<li>Spare light line</li>
+<li>Flashlight</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="first-aid"><a class="header" href="#first-aid">First Aid</a></h1>
+<p>When sailing as a Companion or Participant, you will be exposed to the elements wind, water, and sun. These elements create conditions that are called ‘exposure’ and lead to taxing of the body’s regulatory systems. This can lead to exhaustion, hypothermia, or hyperthermia.</p>
+<p>Both Companions and Participants should be aware of their limitations and when its apparent the limits are getting close, it’s time to go back to the dock. Don’t forget it takes time to return to the East end of Harbor Island, reach the channel entrance, and sail up the channel and fairway to reach the dock.</p>
+<p>Once it’s evident that the Participant is experiencing being chilled, or overheated begin to treat immediately with what’s at hand. Heaving to can be done in order to don a jacket or remove a layer (and immediately don the lifejacket again) should be done. If that resolves the problem and the participant decides to continue to sail, the Companion should insist that the Participant sail in the vicinity of Harbor Island’s East End. If the Participant begins to experience symptoms of exposure again then it’s time to head in. Contact the Chase Boat on VHF that you’re heading back to the dock. The CB will follow you up the channel to ensure safe passage to the Dock.</p>
+<p>If Dock Support is available the CB will then head back out to continue escorting the other Martin 16s out, or if no Dock Support is standing by, the CB will act as Dock Support until its determined that the Participant is fine or receiving the assistance needed.</p>
+<p>Other aid that can be rendered on the water is providing water to anyone that is dehydrated, application of sunblock, and putting band aids on cuts. If more serious problems present themselves don’t hesitate to use the VHF to notify the Chase Boat. If it’s possible to sail back safely then do so, otherwise arrange to be towed. If the problem is extreme then use Channel 16 to notify the Coast Guard.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="signaling-help"><a class="header" href="#signaling-help">Signaling Help</a></h1>
+<p>First thing you can do on the Martin 16 is to call the Chase Boat on the VHF Radio. If that doesn’t work you can signal for help by lowering your mainsail. This will make you less visible at a distance but once the Chase Boat sees you they will come over to determine why your sail is down. Next try calling the Dock Leader on your cellphone. If none of these methods work, you can dial 911 and explain your predicament and they will either send the Harbor Patrol or the Coast Guard.</p>
+<p>If the Chase Boat is within view but not answering your radio call you can simply raise your arms and begin to wave them slowly overhead, which is an international sign of distress. You may attract a boat that is not affiliated with Challenged Sailors San Diego. If the situation is dire enough then allow them to render assistance or attempt to call for assistance.</p>
+<h2 id="us-coast-guard-approved-pyrotechnic-visual-distress-signals-include"><a class="header" href="#us-coast-guard-approved-pyrotechnic-visual-distress-signals-include">U.S. Coast Guard-approved pyrotechnic Visual Distress Signals include</a></h2>
+<ul>
+<li>Pyrotechnic red flares, hand-held or aerial</li>
+<li>Pyrotechnic orange smoke, hand-held or floating</li>
+<li>Launchers for aerial red meteors or parachute flares</li>
+</ul>
+<h2 id="us-coast-guard-approved-non-pyrotechnic-visual-distress-signals"><a class="header" href="#us-coast-guard-approved-non-pyrotechnic-visual-distress-signals">US Coast Guard approved non-pyrotechnic Visual Distress Signals:</a></h2>
+<p>Must be in serviceable condition, readily accessible, and certified by the manufacturer as complying with U.S. Coast Guard requirements.</p>
+<h3 id="orange-distress-flag"><a class="header" href="#orange-distress-flag">Orange Distress Flag</a></h3>
+<ul>
+<li>Used as a day signal only. Must be at least 3 x 3 feet with a black circle and square on an - ange background. Must be marked U.S. Coast Guard approved.</li>
+<li>Most visible when attached and waved on a paddle or boat hook, or flown from a mast.</li>
+<li>May be incorporated into devices such as balloons, kites, or floating streamers.</li>
+</ul>
+<h3 id="electric-distress-light"><a class="header" href="#electric-distress-light">Electric Distress Light</a></h3>
+<ul>
+<li>Acceptable for night use only</li>
+<li>Automatically flashes the international SOS distress signal ( ...---... )</li>
+<li>Must be marked with an indication that it meets U.S. Coast Guard requirements.</li>
+</ul>
+<h2 id="vhf-radio"><a class="header" href="#vhf-radio">VHF Radio</a></h2>
+<p>In emergency situations there are three phrases that you might hear on a VHF radio:</p>
+<p><strong>MAYDAY</strong> - distress signal requires the most urgent response. This signal is only to be used when a person or boat is threatened by grave or imminent danger, and requires assistance.</p>
+<p><strong>PAN-PAN</strong> - (pronounced pahn-pahn) used to signal urgent information, like when someone has fallen overboard, or a boat is drifting into shore or a busy shipping channel. If your emergency isn't immediately life threatening, say Pan-Pan instead of Mayday,</p>
+<p><strong>SECURITE</strong> - (pronounced sea-cur-i-tay) is the safety signal. This is used to transmit information about the safety of navigation.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="vhf-basic-operation"><a class="header" href="#vhf-basic-operation">VHF Basic Operation</a></h1>
+<p><img src="images/radio_reference_guide.png" alt="vhf quick reference guide" /></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
