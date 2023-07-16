@@ -1,7 +1,6 @@
 # Summary
 
 [Sailing Manual](./sailing_manual.md)
-[Table of Contents](./table_of_contents.md)
 
 - [Parts of a Boat](./parts_of_a_boat.md)
   - [Sailing Terminology](./sailing_terminology.md)
@@ -23,7 +22,7 @@
 - [Slowing or Stopping](./slowing_or_stopping.md)
 - [Man Overboard (MOB) Drill](./mob_drill.md)
   - [Man Overboard Drill (Using Quick Stop)](./mob_drill_quick_stop.md)
-- [Man Overboard (MOB) Drill "Adapted"](./mob_drill_quick_stop.md)
+- [Man Overboard (MOB) Drill "Adapted"](./mob_drill_adapted.md)
 - [Sailing Using Clock Positions](./sailing_using_clock_positions.md)
 - [Preparation](./preparation.md)
   - [Dressing for Hot or Cold](./dressing_for_hot_or_cold.md)
