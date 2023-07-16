@@ -1,5 +1,6 @@
 # Summary
 
+[Cover](./cover.md)
 [Sailing Manual](./sailing_manual.md)
 
 - [Parts of a Boat](./parts_of_a_boat.md)

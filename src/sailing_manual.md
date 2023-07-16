@@ -11,3 +11,7 @@ We hope you enjoy your day on the water, and find these sailing practice skill l
 By Jane Dunn 1/28/2016
 
 Updated by E. Eric Matus 6/22/2022
+
+Converted to web book by M. Ryan Sullivan 7/16/2023
+
+<a href="mailto:info@challengedsailors.org">Email</a> us if you spot any issues.
